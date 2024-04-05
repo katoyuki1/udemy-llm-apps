@@ -5,7 +5,6 @@ poetry add llama-index@0.10.27 pypdf@4.1.0
 import streamlit as st
 import tempfile
 from pathlib import Path
-from langchain_openai import ChatOpenAI
 from llama_index.core import VectorStoreIndex
 from llama_index.readers.file import PDFReader
 from llama_index.embeddings.openai import OpenAIEmbedding
@@ -37,8 +36,6 @@ if uploaded_file and index is None:
             f.write(uploaded_file.getbuffer())
 
             documents = PDFReader().load_data(file=Path(f.name))
-
-            llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
 
             Settings.llm = OpenAI(model="gpt-3.5-turbo")
             Settings.embed_model = OpenAIEmbedding(model="text-embedding-3-small")
