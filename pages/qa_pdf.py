@@ -1,3 +1,7 @@
+"""
+poetry add llama-index@0.10.27 pypdf@4.1.0
+"""
+
 import streamlit as st
 import tempfile
 from pathlib import Path

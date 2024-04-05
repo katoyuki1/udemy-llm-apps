@@ -1,5 +1,5 @@
 """
-poetry add llama-index@0.10.27 pypdf@4.1.0
+poetry add langchain@0.1.14 langchain-openai@0.1.1 streamlit@1.25.0  pydantic@2.6.4
 """
 
 import streamlit as st
